@@ -1,5 +1,6 @@
 .idea
 hdc_detector.bin
+detector.bin
 octave-workspace
 Detector.mat
 Log.txt
