@@ -1,3 +1,10 @@
+.idea
+hdc_detector.bin
+octave-workspace
+Detector.mat
+Log.txt
+.ipynb_checkpoints
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -102,3 +109,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.DS_Store
+.idea/
+default_opts.json
+images/
+notebook_images/
+Would skip repository octave/toolbox
+Would skip repository octave/jsonlab
+simple_model.json
+simple_model.json.2.yaml
