@@ -5,4 +5,4 @@ services:
     ports:
      - "10000:10000"
     volumes:
-     - "./dataiku/dss:/home/dataiku/dss"
+     - "/Users/Bhill/git/Computer_Vision_Object_Detection/dataiku/dss:/home/dataiku/dss"
