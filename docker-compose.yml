@@ -1,0 +1,8 @@
+version: "3"
+services:
+  dataiku:
+    build: dataiku
+    ports:
+     - "10000:10000"
+    volumes:
+     - "./dataiku/dss:/home/dataiku/dss"
