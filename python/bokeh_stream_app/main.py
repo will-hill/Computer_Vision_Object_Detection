@@ -1,4 +1,4 @@
-import os
+import numpy as np
 from bokeh.io import curdoc
 from bokeh.layouts import row, widgetbox
 from bokeh.models import ColumnDataSource, CustomJS
@@ -45,7 +45,11 @@ input.onchange = function(){
 input.click();
 """
 
-save_path = dirname(__file__)
+# import pandas
+
+# pandas.read_csv(join(dirname(__file__), 'data', 'things.csv'))
+
+save_path = dirname(__file__) + '/static/'
 
 def file_callback(attr, old, new):
     name = 'tmp.png'
@@ -68,29 +72,29 @@ source.on_change('data', file_callback)
 button = Button(label="Upload File", button_type="success")
 button.callback = CustomJS(args=dict(source=source), code=_upload_js)
 
-# Set up plot
-p = figure(x_range=(0, 1), y_range=(0, 1))
 
 def update(file_path):
     print('attempting: ' + file_path + '\n\n')
+    x = np.linspace(0, 4 * np.pi, 5)
+    y = 13 * np.sin(12 * x + 4) + 2
+    source.data = dict(x=x, y=y)
+    img_path = 'bokeh_stream_app/static/tmp.png'
+    p.image_url(url=[img_path], x=x_range[0], y=y_range[1], w=x_range[1] - x_range[0], h=y_range[1] - y_range[0])
 
-    image = 'tmp.png'
-    image_ints = ColumnDataSource(dict(url=[image]))
-    p = figure(plot_width=500, plot_height=500, title="")
-    p.image_url(url='url', x=0.05, y=0.85, h=0.7, w=0.9, source=image_ints)
-    # p.image_url(url=['tmp.png'], x=0, y=0, w=1, h=1, anchor="bottom_left")
-    # p.image_url(url=['tmp.png'], x=0, y=0, w=1, h=1, anchor="bottom_left")
-    # p.image_url(url=[file_path], x=0, y=0, w=1, h=1, anchor="bottom_left")
-    # p.image(image=[file_path], x=0, y=0, dw=10, dh=10, palette="Spectral11")
-    # p.image(image=[file_path],  x=0, y=0, w=1, h=1, anchor="bottom_left")
-    # curdoc().add_root(row(button, p))
-    # curdoc().title = "Upload"
-    # show(p)
-    # curdoc()
 
 
 # update(name)
 # show(p)
 #curdoc().add_root(page_logo)
-curdoc().add_root(row(button, p))
-curdoc().title = "Upload"
+# Set up plot
+#p = figure(x_range=(0, 1), y_range=(0, 1))
+x_range = (-20,-10) # could be anything - e.g.(0,1)
+y_range = (20,30)
+p = figure(x_range=x_range, y_range=y_range)
+img_path = 'bokeh_stream_app/static/tmp.png'
+p.image_url(url=[img_path],x=x_range[0],y=y_range[1],w=x_range[1]-x_range[0],h=y_range[1]-y_range[0])
+
+doc = curdoc()
+
+doc.add_root(row(button, p))
+doc.title = "Upload"
