@@ -1,0 +1,2 @@
+name,opts.modelDs.height,opts.modelDs.width,opts.modelDsPad.height,opts.modelDsPad.width,stride,cascThr,cascCal,nWeak,seed,nPos,nNeg,nPerNeg,nAccNeg,winsSave
+default_clf,19,19,20,20,4,-1,0.005,128,0,inf,5000,25,1000,0
