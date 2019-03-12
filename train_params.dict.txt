@@ -1,0 +1,15 @@
+row_dict['name'] = 'smallest'
+row_dict['opts.modelDs.height'] = 19
+row_dict['opts.modelDs.width'] = 19
+row_dict['opts.modelDsPad.height'] = 25
+row_dict['opts.modelDsPad.width'] = 25
+row_dict['stride'] = 1
+row_dict['cascThr'] = -1
+row_dict['cascCal'] = 0.00001
+row_dict['nWeak'] = 1
+row_dict['seed'] = 0
+row_dict['nPos'] = 1
+row_dict['nNeg'] = 0
+row_dict['nPerNeg'] = 0
+row_dict['nAccNeg'] = 0
+row_dict['winsSave'] = 0
