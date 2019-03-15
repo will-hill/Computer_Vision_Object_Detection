@@ -1,0 +1,164 @@
+{
+	"one_tree_1_img": {
+		"opts": {
+			"pPyramid": {
+				"pChns": {
+					"shrink": 4,
+					"pColor": {
+						"enabled": 1,
+						"smooth": 1,
+						"colorSpace": "luv"
+					},
+					"pGradMag": {
+						"enabled": 1,
+						"colorChn": 0,
+						"normRad": 5,
+						"normConst": 0.005,
+						"full": 0
+					},
+					"pGradHist": {
+						"enabled": 1,
+						"binSize": null,
+						"nOrients": 6,
+						"softBin": 0,
+						"useHog": 0,
+						"clipHog": 0.2
+					},
+					"pCustom": [],
+					"complete": 1
+				},
+				"nPerOct": 8,
+				"nOctUp": 0,
+				"nApprox": 7,
+				"lambdas": [-0,0.0011,0.0011],
+				"pad": [4,4],
+				"minDs": [19,19],
+				"smooth": 1,
+				"concat": 1,
+				"complete": 1
+			},
+			"filters": null,
+			"modelDs": [19,19],
+			"modelDsPad": [20,20],
+			"pNms": {
+				"type": "maxg",
+				"overlap": 0.65,
+				"ovrDnm": "min"
+			},
+			"stride": 4,
+			"cascThr": -1,
+			"cascCal": 0.005,
+			"nWeak": 1,
+			"pBoost": {
+				"pTree": {
+					"nBins": 256,
+					"maxDepth": 2,
+					"minWeight": 0.01,
+					"fracFtrs": 1,
+					"nThreads": 16
+				},
+				"nWeak": 1,
+				"discrete": 1,
+				"verbose": 16
+			},
+			"seed": 0,
+			"name": "",
+			"posGtDir": "",
+			"posImgDir": "",
+			"negImgDir": "",
+			"posWinDir": "images\/simple\/posWinDir",
+			"negWinDir": "images\/simple\/negWinDir",
+			"imreadf": {
+				"function": "imread",
+				"type": "simple",
+				"file": "\/Applications\/Octave-4.4.1.app\/Contents\/Resources\/usr\/Cellar\/octave-octave-app_4.4.1_0\/4.4.1\/share\/octave\/4.4.1\/m\/image\/imread.m"
+			},
+			"imreadp": [],
+			"pLoad": {
+				"squarify": [
+					0,
+					1
+				]
+			},
+			"nPos": "_Inf_",
+			"nNeg": 5000,
+			"nPerNeg": 25,
+			"nAccNeg": 1000,
+			"pJitter": [],
+			"winsSave": 0
+		},
+		"clf": {
+			"fids": [
+				[20],
+				[0],
+				[0]
+			],
+			"thrs": [
+				[0.3063881695],
+				[0],
+				[0]
+			],
+			"child": [
+				[2],
+				[0],
+				[0]
+			],
+			"hs": [
+				[-4.994999886],
+				[5.005000114],
+				[-4.994999886]
+			],
+			"weights": [
+				[1],
+				[0.5],
+				[0.5]
+			],
+			"depth": [
+				[0],
+				[1],
+				[1]
+			],
+			"errs": 0,
+			"losses": 0.006737949327,
+			"treeDepth": 1
+		},
+		"info": [
+			{
+				"name": "color channels",
+				"pChn": {
+					"enabled": 1,
+					"smooth": 1,
+					"colorSpace": "luv"
+				},
+				"nChns": 3,
+				"padWith": "replicate"
+			},
+			{
+				"name": "gradient magnitude",
+				"pChn": {
+					"enabled": 1,
+					"colorChn": 0,
+					"normRad": 5,
+					"normConst": 0.005,
+					"full": 0
+				},
+				"nChns": 1,
+				"padWith": 0
+			},
+			{
+				"name": "gradient histogram",
+				"pChn": {
+					"enabled": 1,
+					"binSize": null,
+					"nOrients": 6,
+					"softBin": 0,
+					"useHog": 0,
+					"clipHog": 0.2
+				},
+				"nChns": 6,
+				"padWith": 0
+			}
+		]
+	}
+}
+
